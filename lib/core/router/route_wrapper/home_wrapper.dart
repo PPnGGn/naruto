@@ -12,7 +12,7 @@ class HomeWrapperPage extends StatelessWidget {
       // list of your tab routes
       // routes used here must be declared as children
       // routes of /dashboard
-      routes: const [HomeListRoute(), SettingsRoute(),],
+      routes: [HomeListRoute(), SettingsRoute(),],
       transitionBuilder:
           (context, child, animation) => FadeTransition(
             opacity: animation,
@@ -33,17 +33,12 @@ class HomeWrapperPage extends StatelessWidget {
               fontWeight: FontWeight.w400,
               fontSize: 14,
               fontFamily: "SF Pro Display",
-              color: Colors.green,
             ),
             selectedLabelStyle: const TextStyle(
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.bold,
               fontSize: 14,
               fontFamily: "SF Pro Display",
-              color: Colors.green,
             ),
-            backgroundColor: Colors.green,
-            selectedItemColor: Colors.green,
-            unselectedItemColor: Colors.green,
             currentIndex: tabsRouter.activeIndex,
             type: BottomNavigationBarType.fixed,
             showSelectedLabels: true,
@@ -52,8 +47,8 @@ class HomeWrapperPage extends StatelessWidget {
               tabsRouter.setActiveIndex(index);
             },
             items: const [
-              BottomNavigationBarItem(label: "Каталог", icon: Icon(Icons.store)),
-              BottomNavigationBarItem(label: "Корзина", icon: Icon(Icons.shopping_cart)),
+              BottomNavigationBarItem(label: "главная", icon: Icon(Icons.store)),
+              BottomNavigationBarItem(label: "настройки", icon: Icon(Icons.shopping_cart)),
   
             ],
           ),

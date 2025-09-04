@@ -32,7 +32,6 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^9.1.1
   retrofit: ^4.7.2
-  logger: ^2.6.1  # for logging purpose
   json_annotation: ^4.9.0
   dio: ^5.9.0
   freezed_annotation: ^3.1.0

@@ -8,34 +8,26 @@ class AppRouter extends RootStackRouter {
 
   @override
   List<AutoRoute> get routes => [
+    //AutoRoute(page: WelcomeRoute.page, path: "/"),
     AutoRoute(
-      page: WelcomeRoute.page,
+      page: HomeWrapperRoute.page,
       path: "/",
       children: [
         AutoRoute(
-          page: HomeWrapperRoute.page,
-          path: "home",
+          page: HomeListWrapperRoute.page,
+          path: "home_list",
           children: [
-            AutoRoute(
-              page: HomeListWrapperRoute.page,
-              path: "home_list",
-              children: [
-                AutoRoute(
-                  page: HomeListRoute.page,
-                  path: "start",
-                  initial: true,
-                ),
-  
-              ],
-            ),
-            AutoRoute(
-              page: SettingsWrapperRoute.page,
-              path: "settings",
-              children: [
-                AutoRoute(page: SettingsRoute.page, path: "start", initial: true),
-              ],
-            ),
-      
+            AutoRoute(page: HomeListRoute.page, path: "start", initial: true),
+            AutoRoute(page: CharacterRoute.page, path: "character", ),
+
+            
+          ],
+        ),
+        AutoRoute(
+          page: SettingsWrapperRoute.page,
+          path: "settings",
+          children: [
+            AutoRoute(page: SettingsRoute.page, path: "start", initial: true),
           ],
         ),
       ],
