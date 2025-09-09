@@ -11,13 +11,17 @@ class CollectionsCubit extends Cubit<CollectionsState> {
 
   CollectionsCubit(this._apiClient) : super(const CollectionsState.initial());
 
-  Future<void> fetchCharacters({int page = 1, int limit = 20}) async {
+  Future<void> fetchCharacters() async {
     try {
       emit(const CollectionsState.loading());
-      final response = await _apiClient.getCharacters(page: page, limit: limit);
+      print('Начинаем загрузку персонажей...');
+      final response = await _apiClient.getCharacters();
+      print('Получен ответ: ${response.toString()}');
       emit(CollectionsState.loaded(response.characters));
-    } catch (e) {
-      emit(CollectionsState.error(e.toString()));
+    } catch (e, stackTrace) {
+      print('Ошибка при загрузке персонажей: $e');
+      print('Стек вызовов: $stackTrace');
+      emit(CollectionsState.error('Не удалось загрузить персонажей: ${e.toString()}'));
     }
   }
 }

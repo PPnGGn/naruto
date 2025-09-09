@@ -7,12 +7,13 @@ part 'api.g.dart';
 
 @RestApi(baseUrl: 'https://dattebayo-api.onrender.com')
 abstract class RestClient {
-  factory RestClient(Dio dio, {String? baseUrl}) = _RestClient;
+  factory RestClient(Dio dio, {String? baseUrl})  = _RestClient;
 
   @GET('/characters')
   Future<CharactersResponse> getCharacters({
     @Query('page') int page = 1,
-    @Query('limit') int limit = 20,
+    @Query('limit') int limit = 10,
+    @Query('name') String? name,
   });
 
   // @GET('/clans')

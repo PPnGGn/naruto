@@ -22,10 +22,16 @@ class _RestClient implements RestClient {
   @override
   Future<CharactersResponse> getCharacters({
     int page = 1,
-    int limit = 20,
+    int limit = 10,
+    String? name,
   }) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'page': page, r'limit': limit};
+    final queryParameters = <String, dynamic>{
+      r'page': page,
+      r'limit': limit,
+      r'name': name,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<CharactersResponse>(

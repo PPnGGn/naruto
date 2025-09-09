@@ -35,13 +35,13 @@ class _OverviewPageState extends State<OverviewPage> {
                   child: Column(
                     children: [
                       Text(
-                        characters[index].name,
+                        characters[index].name!,
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       const SizedBox(height: 8),
-                      if (characters[index].images.isNotEmpty)
+                      if (characters[index].images!.isNotEmpty)
                         Image.network(
-                          characters[index].images.first,
+                          characters[index].images!.first,
                           height: 200,
                           width: double.infinity,
                           fit: BoxFit.cover,
