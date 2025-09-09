@@ -986,4 +986,559 @@ as dynamic,
 
 }
 
+
+/// @nodoc
+mixin _$ClansResponse {
+
+ List<Clan> get clans; int? get currentPage; int? get pageSize; int? get total;
+/// Create a copy of ClansResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ClansResponseCopyWith<ClansResponse> get copyWith => _$ClansResponseCopyWithImpl<ClansResponse>(this as ClansResponse, _$identity);
+
+  /// Serializes this ClansResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ClansResponse&&const DeepCollectionEquality().equals(other.clans, clans)&&(identical(other.currentPage, currentPage) || other.currentPage == currentPage)&&(identical(other.pageSize, pageSize) || other.pageSize == pageSize)&&(identical(other.total, total) || other.total == total));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(clans),currentPage,pageSize,total);
+
+@override
+String toString() {
+  return 'ClansResponse(clans: $clans, currentPage: $currentPage, pageSize: $pageSize, total: $total)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ClansResponseCopyWith<$Res>  {
+  factory $ClansResponseCopyWith(ClansResponse value, $Res Function(ClansResponse) _then) = _$ClansResponseCopyWithImpl;
+@useResult
+$Res call({
+ List<Clan> clans, int? currentPage, int? pageSize, int? total
+});
+
+
+
+
+}
+/// @nodoc
+class _$ClansResponseCopyWithImpl<$Res>
+    implements $ClansResponseCopyWith<$Res> {
+  _$ClansResponseCopyWithImpl(this._self, this._then);
+
+  final ClansResponse _self;
+  final $Res Function(ClansResponse) _then;
+
+/// Create a copy of ClansResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? clans = null,Object? currentPage = freezed,Object? pageSize = freezed,Object? total = freezed,}) {
+  return _then(_self.copyWith(
+clans: null == clans ? _self.clans : clans // ignore: cast_nullable_to_non_nullable
+as List<Clan>,currentPage: freezed == currentPage ? _self.currentPage : currentPage // ignore: cast_nullable_to_non_nullable
+as int?,pageSize: freezed == pageSize ? _self.pageSize : pageSize // ignore: cast_nullable_to_non_nullable
+as int?,total: freezed == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [ClansResponse].
+extension ClansResponsePatterns on ClansResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ClansResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _ClansResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ClansResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _ClansResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ClansResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _ClansResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Clan> clans,  int? currentPage,  int? pageSize,  int? total)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _ClansResponse() when $default != null:
+return $default(_that.clans,_that.currentPage,_that.pageSize,_that.total);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Clan> clans,  int? currentPage,  int? pageSize,  int? total)  $default,) {final _that = this;
+switch (_that) {
+case _ClansResponse():
+return $default(_that.clans,_that.currentPage,_that.pageSize,_that.total);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Clan> clans,  int? currentPage,  int? pageSize,  int? total)?  $default,) {final _that = this;
+switch (_that) {
+case _ClansResponse() when $default != null:
+return $default(_that.clans,_that.currentPage,_that.pageSize,_that.total);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _ClansResponse implements ClansResponse {
+  const _ClansResponse({required final  List<Clan> clans, this.currentPage, this.pageSize, this.total}): _clans = clans;
+  factory _ClansResponse.fromJson(Map<String, dynamic> json) => _$ClansResponseFromJson(json);
+
+ final  List<Clan> _clans;
+@override List<Clan> get clans {
+  if (_clans is EqualUnmodifiableListView) return _clans;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_clans);
+}
+
+@override final  int? currentPage;
+@override final  int? pageSize;
+@override final  int? total;
+
+/// Create a copy of ClansResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ClansResponseCopyWith<_ClansResponse> get copyWith => __$ClansResponseCopyWithImpl<_ClansResponse>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ClansResponseToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ClansResponse&&const DeepCollectionEquality().equals(other._clans, _clans)&&(identical(other.currentPage, currentPage) || other.currentPage == currentPage)&&(identical(other.pageSize, pageSize) || other.pageSize == pageSize)&&(identical(other.total, total) || other.total == total));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_clans),currentPage,pageSize,total);
+
+@override
+String toString() {
+  return 'ClansResponse(clans: $clans, currentPage: $currentPage, pageSize: $pageSize, total: $total)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ClansResponseCopyWith<$Res> implements $ClansResponseCopyWith<$Res> {
+  factory _$ClansResponseCopyWith(_ClansResponse value, $Res Function(_ClansResponse) _then) = __$ClansResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ List<Clan> clans, int? currentPage, int? pageSize, int? total
+});
+
+
+
+
+}
+/// @nodoc
+class __$ClansResponseCopyWithImpl<$Res>
+    implements _$ClansResponseCopyWith<$Res> {
+  __$ClansResponseCopyWithImpl(this._self, this._then);
+
+  final _ClansResponse _self;
+  final $Res Function(_ClansResponse) _then;
+
+/// Create a copy of ClansResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? clans = null,Object? currentPage = freezed,Object? pageSize = freezed,Object? total = freezed,}) {
+  return _then(_ClansResponse(
+clans: null == clans ? _self._clans : clans // ignore: cast_nullable_to_non_nullable
+as List<Clan>,currentPage: freezed == currentPage ? _self.currentPage : currentPage // ignore: cast_nullable_to_non_nullable
+as int?,pageSize: freezed == pageSize ? _self.pageSize : pageSize // ignore: cast_nullable_to_non_nullable
+as int?,total: freezed == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+
+/// @nodoc
+mixin _$Clan {
+
+ int? get id; String? get name; List<String>? get characters;
+/// Create a copy of Clan
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ClanCopyWith<Clan> get copyWith => _$ClanCopyWithImpl<Clan>(this as Clan, _$identity);
+
+  /// Serializes this Clan to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Clan&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other.characters, characters));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name,const DeepCollectionEquality().hash(characters));
+
+@override
+String toString() {
+  return 'Clan(id: $id, name: $name, characters: $characters)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ClanCopyWith<$Res>  {
+  factory $ClanCopyWith(Clan value, $Res Function(Clan) _then) = _$ClanCopyWithImpl;
+@useResult
+$Res call({
+ int? id, String? name, List<String>? characters
+});
+
+
+
+
+}
+/// @nodoc
+class _$ClanCopyWithImpl<$Res>
+    implements $ClanCopyWith<$Res> {
+  _$ClanCopyWithImpl(this._self, this._then);
+
+  final Clan _self;
+  final $Res Function(Clan) _then;
+
+/// Create a copy of Clan
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? name = freezed,Object? characters = freezed,}) {
+  return _then(_self.copyWith(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,characters: freezed == characters ? _self.characters : characters // ignore: cast_nullable_to_non_nullable
+as List<String>?,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [Clan].
+extension ClanPatterns on Clan {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Clan value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Clan() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Clan value)  $default,){
+final _that = this;
+switch (_that) {
+case _Clan():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Clan value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Clan() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? id,  String? name,  List<String>? characters)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Clan() when $default != null:
+return $default(_that.id,_that.name,_that.characters);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? id,  String? name,  List<String>? characters)  $default,) {final _that = this;
+switch (_that) {
+case _Clan():
+return $default(_that.id,_that.name,_that.characters);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? id,  String? name,  List<String>? characters)?  $default,) {final _that = this;
+switch (_that) {
+case _Clan() when $default != null:
+return $default(_that.id,_that.name,_that.characters);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _Clan implements Clan {
+  const _Clan(this.id, this.name, final  List<String>? characters): _characters = characters;
+  factory _Clan.fromJson(Map<String, dynamic> json) => _$ClanFromJson(json);
+
+@override final  int? id;
+@override final  String? name;
+ final  List<String>? _characters;
+@override List<String>? get characters {
+  final value = _characters;
+  if (value == null) return null;
+  if (_characters is EqualUnmodifiableListView) return _characters;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
+
+
+/// Create a copy of Clan
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ClanCopyWith<_Clan> get copyWith => __$ClanCopyWithImpl<_Clan>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ClanToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Clan&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&const DeepCollectionEquality().equals(other._characters, _characters));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name,const DeepCollectionEquality().hash(_characters));
+
+@override
+String toString() {
+  return 'Clan(id: $id, name: $name, characters: $characters)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ClanCopyWith<$Res> implements $ClanCopyWith<$Res> {
+  factory _$ClanCopyWith(_Clan value, $Res Function(_Clan) _then) = __$ClanCopyWithImpl;
+@override @useResult
+$Res call({
+ int? id, String? name, List<String>? characters
+});
+
+
+
+
+}
+/// @nodoc
+class __$ClanCopyWithImpl<$Res>
+    implements _$ClanCopyWith<$Res> {
+  __$ClanCopyWithImpl(this._self, this._then);
+
+  final _Clan _self;
+  final $Res Function(_Clan) _then;
+
+/// Create a copy of Clan
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? name = freezed,Object? characters = freezed,}) {
+  return _then(_Clan(
+freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,freezed == characters ? _self._characters : characters // ignore: cast_nullable_to_non_nullable
+as List<String>?,
+  ));
+}
+
+
+}
+
 // dart format on

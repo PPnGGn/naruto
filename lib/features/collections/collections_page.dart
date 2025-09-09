@@ -15,21 +15,175 @@ class CollectionsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Главная', style: AppTextStyles.h2)),
       body: ListView(
+        padding: const EdgeInsets.all(16),
+
         children: [
           GestureDetector(
             onTap: () {
-              context.router.push(const OverviewRoute());
+              context.router.navigatePath("overview");
             },
             child: Container(
               width: double.maxFinite,
-              height: 50,
+              height: 60,
               decoration: BoxDecoration(
                 color: AppColors.card,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: AppColors.cardBorder, width: 0.5),
               ),
               padding: const EdgeInsets.all(16),
-              child: const Text("Персонажи"),
+              child: const Text(
+                "Персонажи",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+
+          GestureDetector(
+            onTap: () {
+              context.router.navigatePath("overview");
+            },
+            child: Container(
+              width: double.maxFinite,
+              height: 60,
+              decoration: BoxDecoration(
+                color: AppColors.card,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.cardBorder, width: 0.5),
+              ),
+              padding: const EdgeInsets.all(16),
+              child: const Text(
+                "Кланы",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          GestureDetector(
+            onTap: () {
+              context.router.navigatePath("overview");
+            },
+            child: Container(
+              width: double.maxFinite,
+              height: 60,
+              decoration: BoxDecoration(
+                color: AppColors.card,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.cardBorder, width: 0.5),
+              ),
+              padding: const EdgeInsets.all(16),
+              child: const Text(
+                "Деревни",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          GestureDetector(
+            onTap: () {
+              context.router.navigatePath("overview");
+            },
+            child: Container(
+              width: double.maxFinite,
+              height: 60,
+              decoration: BoxDecoration(
+                color: AppColors.card,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.cardBorder, width: 0.5),
+              ),
+              padding: const EdgeInsets.all(16),
+              child: const Text(
+                "Кеккеи-генкай",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          GestureDetector(
+            onTap: () {
+              context.router.navigatePath("overview");
+            },
+            child: Container(
+              width: double.maxFinite,
+              height: 60,
+              decoration: BoxDecoration(
+                color: AppColors.card,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.cardBorder, width: 0.5),
+              ),
+              padding: const EdgeInsets.all(16),
+              child: const Text(
+                "Хвостатые",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          GestureDetector(
+            onTap: () {
+              context.router.navigatePath("overview");
+            },
+            child: Container(
+              width: double.maxFinite,
+              height: 60,
+              decoration: BoxDecoration(
+                color: AppColors.card,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.cardBorder, width: 0.5),
+              ),
+              padding: const EdgeInsets.all(16),
+              child: const Text(
+                "Команды",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          GestureDetector(
+            onTap: () {
+              context.router.navigatePath("overview");
+            },
+            child: Container(
+              width: double.maxFinite,
+              height: 60,
+              decoration: BoxDecoration(
+                color: AppColors.card,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.cardBorder, width: 0.5),
+              ),
+              padding: const EdgeInsets.all(16),
+              child: const Text(
+                "Акатсуки",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          GestureDetector(
+            onTap: () {
+              context.router.navigatePath("overview");
+            },
+            child: Container(
+              width: double.maxFinite,
+              height: 60,
+              decoration: BoxDecoration(
+                color: AppColors.card,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.cardBorder, width: 0.5),
+              ),
+              padding: const EdgeInsets.all(16),
+              child: const Text(
+                "Кара",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
             ),
           ),
         ],

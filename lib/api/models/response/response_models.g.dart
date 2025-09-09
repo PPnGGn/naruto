@@ -92,3 +92,33 @@ Map<String, dynamic> _$PersonalToJson(_Personal instance) => <String, dynamic>{
   'titles': instance.titles,
   'status': instance.status,
 };
+
+_ClansResponse _$ClansResponseFromJson(Map<String, dynamic> json) =>
+    _ClansResponse(
+      clans: (json['clans'] as List<dynamic>)
+          .map((e) => Clan.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      currentPage: (json['currentPage'] as num?)?.toInt(),
+      pageSize: (json['pageSize'] as num?)?.toInt(),
+      total: (json['total'] as num?)?.toInt(),
+    );
+
+Map<String, dynamic> _$ClansResponseToJson(_ClansResponse instance) =>
+    <String, dynamic>{
+      'clans': instance.clans,
+      'currentPage': instance.currentPage,
+      'pageSize': instance.pageSize,
+      'total': instance.total,
+    };
+
+_Clan _$ClanFromJson(Map<String, dynamic> json) => _Clan(
+  (json['id'] as num?)?.toInt(),
+  json['name'] as String?,
+  (json['characters'] as List<dynamic>?)?.map((e) => e as String).toList(),
+);
+
+Map<String, dynamic> _$ClanToJson(_Clan instance) => <String, dynamic>{
+  'id': instance.id,
+  'name': instance.name,
+  'characters': instance.characters,
+};

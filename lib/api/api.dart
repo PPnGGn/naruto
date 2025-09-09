@@ -16,8 +16,14 @@ abstract class RestClient {
     @Query('name') String? name,
   });
 
-  // @GET('/clans')
-  // Future<List<Clan>> getClans();
+    @GET('/clans')
+  Future<CharactersResponse> getClans({
+    @Query('page') int page = 1,
+    @Query('limit') int limit = 10,
+    @Query('name') String? name,
+  });
+
+
 
   // @GET('/villages')
   // Future<List<Village>> getVillages();
