@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'character_cubit.dart';
+part of 'overview_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,7 +12,7 @@ part of 'character_cubit.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
-mixin _$CharacterState {
+mixin _$OverviewState {
 
 
 
@@ -20,7 +20,7 @@ mixin _$CharacterState {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CharacterState);
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is OverviewState);
 }
 
 
@@ -29,20 +29,20 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'CharacterState()';
+  return 'OverviewState()';
 }
 
 
 }
 
 /// @nodoc
-class $CharacterStateCopyWith<$Res>  {
-$CharacterStateCopyWith(CharacterState _, $Res Function(CharacterState) __);
+class $OverviewStateCopyWith<$Res>  {
+$OverviewStateCopyWith(OverviewState _, $Res Function(OverviewState) __);
 }
 
 
-/// Adds pattern-matching-related methods to [CharacterState].
-extension CharacterStatePatterns on CharacterState {
+/// Adds pattern-matching-related methods to [OverviewState].
+extension OverviewStatePatterns on OverviewState {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -174,7 +174,7 @@ return initial();case _:
 /// @nodoc
 
 
-class _Initial implements CharacterState {
+class _Initial implements OverviewState {
   const _Initial();
   
 
@@ -194,7 +194,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'CharacterState.initial()';
+  return 'OverviewState.initial()';
 }
 
 

@@ -12,13 +12,12 @@ class HomeWrapperPage extends StatelessWidget {
       // list of your tab routes
       // routes used here must be declared as children
       // routes of /dashboard
-      routes: [HomeListRoute(), SettingsRoute(),],
-      transitionBuilder:
-          (context, child, animation) => FadeTransition(
-            opacity: animation,
-            // the passed child is technically our animated selected-tab page
-            child: child,
-          ),
+      routes: [CollectionsRoute(), SettingsRoute()],
+      transitionBuilder: (context, child, animation) => FadeTransition(
+        opacity: animation,
+        // the passed child is technically our animated selected-tab page
+        child: child,
+      ),
       builder: (context, child) {
         // obtain the scoped TabsRouter controller using context
         final tabsRouter = AutoTabsRouter.of(context);
@@ -47,9 +46,14 @@ class HomeWrapperPage extends StatelessWidget {
               tabsRouter.setActiveIndex(index);
             },
             items: const [
-              BottomNavigationBarItem(label: "главная", icon: Icon(Icons.store)),
-              BottomNavigationBarItem(label: "настройки", icon: Icon(Icons.shopping_cart)),
-  
+              BottomNavigationBarItem(
+                label: "главная",
+                icon: Icon(Icons.store),
+              ),
+              BottomNavigationBarItem(
+                label: "настройки",
+                icon: Icon(Icons.shopping_cart),
+              ),
             ],
           ),
         );

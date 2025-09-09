@@ -10,4 +10,5 @@ part 'tailed_beast.dart';
 part 'team.dart';
 part 'akatsuki.dart';
 part 'kara.dart';
+part 'characters_response.dart';
 

@@ -10,7 +10,10 @@ abstract class RestClient {
   factory RestClient(Dio dio, {String? baseUrl}) = _RestClient;
 
   @GET('/characters')
-  Future<List<Character>> getCharacters();
+  Future<CharactersResponse> getCharacters({
+    @Query('page') int page = 1,
+    @Query('limit') int limit = 20,
+  });
 
   // @GET('/clans')
   // Future<List<Clan>> getClans();

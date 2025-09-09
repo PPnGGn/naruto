@@ -747,4 +747,282 @@ as String?,
 
 }
 
+
+/// @nodoc
+mixin _$CharactersResponse {
+
+ List<Character> get characters; int? get currentPage; int? get pageSize; int? get total;
+/// Create a copy of CharactersResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$CharactersResponseCopyWith<CharactersResponse> get copyWith => _$CharactersResponseCopyWithImpl<CharactersResponse>(this as CharactersResponse, _$identity);
+
+  /// Serializes this CharactersResponse to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CharactersResponse&&const DeepCollectionEquality().equals(other.characters, characters)&&(identical(other.currentPage, currentPage) || other.currentPage == currentPage)&&(identical(other.pageSize, pageSize) || other.pageSize == pageSize)&&(identical(other.total, total) || other.total == total));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(characters),currentPage,pageSize,total);
+
+@override
+String toString() {
+  return 'CharactersResponse(characters: $characters, currentPage: $currentPage, pageSize: $pageSize, total: $total)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $CharactersResponseCopyWith<$Res>  {
+  factory $CharactersResponseCopyWith(CharactersResponse value, $Res Function(CharactersResponse) _then) = _$CharactersResponseCopyWithImpl;
+@useResult
+$Res call({
+ List<Character> characters, int? currentPage, int? pageSize, int? total
+});
+
+
+
+
+}
+/// @nodoc
+class _$CharactersResponseCopyWithImpl<$Res>
+    implements $CharactersResponseCopyWith<$Res> {
+  _$CharactersResponseCopyWithImpl(this._self, this._then);
+
+  final CharactersResponse _self;
+  final $Res Function(CharactersResponse) _then;
+
+/// Create a copy of CharactersResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? characters = null,Object? currentPage = freezed,Object? pageSize = freezed,Object? total = freezed,}) {
+  return _then(_self.copyWith(
+characters: null == characters ? _self.characters : characters // ignore: cast_nullable_to_non_nullable
+as List<Character>,currentPage: freezed == currentPage ? _self.currentPage : currentPage // ignore: cast_nullable_to_non_nullable
+as int?,pageSize: freezed == pageSize ? _self.pageSize : pageSize // ignore: cast_nullable_to_non_nullable
+as int?,total: freezed == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [CharactersResponse].
+extension CharactersResponsePatterns on CharactersResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _CharactersResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _CharactersResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _CharactersResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _CharactersResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _CharactersResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _CharactersResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<Character> characters,  int? currentPage,  int? pageSize,  int? total)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _CharactersResponse() when $default != null:
+return $default(_that.characters,_that.currentPage,_that.pageSize,_that.total);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<Character> characters,  int? currentPage,  int? pageSize,  int? total)  $default,) {final _that = this;
+switch (_that) {
+case _CharactersResponse():
+return $default(_that.characters,_that.currentPage,_that.pageSize,_that.total);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<Character> characters,  int? currentPage,  int? pageSize,  int? total)?  $default,) {final _that = this;
+switch (_that) {
+case _CharactersResponse() when $default != null:
+return $default(_that.characters,_that.currentPage,_that.pageSize,_that.total);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class _CharactersResponse implements CharactersResponse {
+  const _CharactersResponse({final  List<Character> characters = const <Character>[], this.currentPage, this.pageSize, this.total}): _characters = characters;
+  factory _CharactersResponse.fromJson(Map<String, dynamic> json) => _$CharactersResponseFromJson(json);
+
+ final  List<Character> _characters;
+@override@JsonKey() List<Character> get characters {
+  if (_characters is EqualUnmodifiableListView) return _characters;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_characters);
+}
+
+@override final  int? currentPage;
+@override final  int? pageSize;
+@override final  int? total;
+
+/// Create a copy of CharactersResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CharactersResponseCopyWith<_CharactersResponse> get copyWith => __$CharactersResponseCopyWithImpl<_CharactersResponse>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$CharactersResponseToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CharactersResponse&&const DeepCollectionEquality().equals(other._characters, _characters)&&(identical(other.currentPage, currentPage) || other.currentPage == currentPage)&&(identical(other.pageSize, pageSize) || other.pageSize == pageSize)&&(identical(other.total, total) || other.total == total));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_characters),currentPage,pageSize,total);
+
+@override
+String toString() {
+  return 'CharactersResponse(characters: $characters, currentPage: $currentPage, pageSize: $pageSize, total: $total)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CharactersResponseCopyWith<$Res> implements $CharactersResponseCopyWith<$Res> {
+  factory _$CharactersResponseCopyWith(_CharactersResponse value, $Res Function(_CharactersResponse) _then) = __$CharactersResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ List<Character> characters, int? currentPage, int? pageSize, int? total
+});
+
+
+
+
+}
+/// @nodoc
+class __$CharactersResponseCopyWithImpl<$Res>
+    implements _$CharactersResponseCopyWith<$Res> {
+  __$CharactersResponseCopyWithImpl(this._self, this._then);
+
+  final _CharactersResponse _self;
+  final $Res Function(_CharactersResponse) _then;
+
+/// Create a copy of CharactersResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? characters = null,Object? currentPage = freezed,Object? pageSize = freezed,Object? total = freezed,}) {
+  return _then(_CharactersResponse(
+characters: null == characters ? _self._characters : characters // ignore: cast_nullable_to_non_nullable
+as List<Character>,currentPage: freezed == currentPage ? _self.currentPage : currentPage // ignore: cast_nullable_to_non_nullable
+as int?,pageSize: freezed == pageSize ? _self.pageSize : pageSize // ignore: cast_nullable_to_non_nullable
+as int?,total: freezed == total ? _self.total : total // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
 // dart format on

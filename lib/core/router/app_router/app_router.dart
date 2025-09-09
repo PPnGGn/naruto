@@ -14,11 +14,11 @@ class AppRouter extends RootStackRouter {
       path: "/",
       children: [
         AutoRoute(
-          page: HomeListWrapperRoute.page,
-          path: "home_list",
+          page: CollectionsWrapperRoute.page,
+          path: "collections",
           children: [
-            AutoRoute(page: HomeListRoute.page, path: "start", initial: true),
-            AutoRoute(page: CharacterRoute.page, path: "character", ),
+            AutoRoute(page: CollectionsRoute.page, path: "start", initial: true),
+            AutoRoute(page: OverviewRoute.page, path: "overview", ),
 
             
           ],

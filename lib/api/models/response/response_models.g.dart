@@ -72,3 +72,23 @@ Map<String, dynamic> _$PersonalToJson(_Personal instance) => <String, dynamic>{
   'titles': instance.titles,
   'status': instance.status,
 };
+
+_CharactersResponse _$CharactersResponseFromJson(Map<String, dynamic> json) =>
+    _CharactersResponse(
+      characters:
+          (json['characters'] as List<dynamic>?)
+              ?.map((e) => Character.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Character>[],
+      currentPage: (json['currentPage'] as num?)?.toInt(),
+      pageSize: (json['pageSize'] as num?)?.toInt(),
+      total: (json['total'] as num?)?.toInt(),
+    );
+
+Map<String, dynamic> _$CharactersResponseToJson(_CharactersResponse instance) =>
+    <String, dynamic>{
+      'characters': instance.characters,
+      'currentPage': instance.currentPage,
+      'pageSize': instance.pageSize,
+      'total': instance.total,
+    };
