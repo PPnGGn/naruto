@@ -23,6 +23,15 @@ class AppRouter extends RootStackRouter {
             
           ],
         ),
+         AutoRoute(
+          page: SearchWrapperRoute.page,
+          path: "search",
+          children: [
+            AutoRoute(page: SearchRoute.page, path: "start", initial: true),
+           
+            
+          ],
+        ),
         AutoRoute(
           page: SettingsWrapperRoute.page,
           path: "settings",

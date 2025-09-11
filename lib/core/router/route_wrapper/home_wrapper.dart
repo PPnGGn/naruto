@@ -12,7 +12,7 @@ class HomeWrapperPage extends StatelessWidget {
       // list of your tab routes
       // routes used here must be declared as children
       // routes of /dashboard
-      routes: [CollectionsRoute(), SettingsRoute()],
+      routes: [CollectionsRoute(), SearchRoute(), SettingsRoute()],
       transitionBuilder: (context, child, animation) => FadeTransition(
         opacity: animation,
         // the passed child is technically our animated selected-tab page
@@ -47,12 +47,16 @@ class HomeWrapperPage extends StatelessWidget {
             },
             items: const [
               BottomNavigationBarItem(
-                label: "главная",
-                icon: Icon(Icons.store),
+                label: "Коллекции",
+                icon: Icon(Icons.collections),
               ),
               BottomNavigationBarItem(
-                label: "настройки",
-                icon: Icon(Icons.shopping_cart),
+                label: "Поиск",
+                icon: Icon(Icons.search),
+              ),
+              BottomNavigationBarItem(
+                label: "Настройки",
+                icon: Icon(Icons.settings),
               ),
             ],
           ),
